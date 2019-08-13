@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "苹方 常规";
+}
+/*上面开始*/
+nav{
+    width: 100%;
+    height: 0.4rem;
+    position: relative;
+}
+nav img{
+    width: auto;
+    height: 0.4rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+/*上面开始*/
+/*上下图开始*/
+main{
+    width: auto;
+    height: 8.9rem;
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+}
+main img{
+    width: auto;
+    height: 8.9rem;
+    display: block;
+    margin: 0 auto;
+}
+.music{
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 0.24rem;
+    right: 0.24rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.music img{
+    width: 0.5rem;
+    height: 0.5rem;
+    display: block;
+    position: absolute;
+}
+.hp{
+    width: 1.24rem;
+    height: 1.24rem;
+    position: absolute;
+    right: 0.24rem;
+    top: 2.85rem;
+    cursor: pointer;
+}
+.hp img{
+    width: 1.24rem;
+    height: 1.24rem;
+}
+.iq{
+    width: 1.24rem;
+    height: 1.24rem;
+    position: absolute;
+    right: 0.24rem;
+    top: 4.21rem;
+    cursor: pointer;
+}
+.iq img{
+    width: 1.24rem;
+    height: 1.24rem;
+}
+.zt{
+    width: 1.24rem;
+    height: 1.24rem;
+    position: absolute;
+    right: 0.24rem;
+    top: 5.57rem;
+    cursor: pointer;
+}
+.zt img{
+    width: 1.24rem;
+    height: 1.24rem;
+}
+/*上下图结束*/
+/*下面开始*/
+footer{
+    width: 100%;
+    height: 4.45rem;
+    position: relative;
+}
+.bottom{
+    width: 100%;
+    height: 4.45rem;
+}
+.bottom img{
+    width: 100%;
+    height: 4.45rem;
+}
+.key{
+    width: 7.03rem;
+    height: 4rem;
+    background: rgba(40,109,218,0.6);
+    position: absolute;
+    margin: 0 auto;
+    right: 0;
+    top: 0.28rem;
+    left: 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.key ul{
+    width: 100%;
+    height: 0.86rem;
+    display: flex;
+    justify-content: center;
+}
+.key ul li{
+    width: 0.49rem;
+    height: 0.8rem;
+    background: url("../img/zk.png") no-repeat;
+    background-size: 0.6rem;
+    cursor: pointer;
+    margin-right: 0.2rem;
+}
+.key ul li:last-child{
+    margin-right: 0rem;
+}
+.key ul li span{
+    display: block;
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 0.8rem;
+}
+/*下面开始*/
