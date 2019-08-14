@@ -28,6 +28,21 @@ main{
     position: relative;
     box-sizing: border-box;
 }
+main .screen{
+    width: 5rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+main .screen .zm{
+    width: 0.53rem;
+    height: 0.77rem;
+    /*background: red;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
 main img{
     width: auto;
     height: 8.9rem;
@@ -74,6 +89,15 @@ main img{
     height: 1.24rem;
 }
 .zt{
+    width: 1.24rem;
+    height: 1.24rem;
+    position: absolute;
+    right: 0.24rem;
+    top: 5.57rem;
+    cursor: pointer;
+    /*z-index: 2;*/
+}
+.jx{
     width: 1.24rem;
     height: 1.24rem;
     position: absolute;
