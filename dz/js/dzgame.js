@@ -89,6 +89,7 @@ window.onload = function () {
                             clearInterval(this.t)
                             alert("小爷也救不了你了🤷")
                             this.hp.innerText = 10
+                            this.jf.innerText = 0
                             this.jx.style.zIndex = "4"
                             this.btn.style.zIndex = "2"
                         }
@@ -172,6 +173,7 @@ window.onload = function () {
                             clearInterval(this.t)
                             alert("大爷常来玩儿呐!🐱‍🏍")
                             this.jf.innerText = 0
+                            this.hp.innerText = 10
                             this.jx.style.zIndex = "4"
                             this.btn.style.zIndex = "2"
                         }
