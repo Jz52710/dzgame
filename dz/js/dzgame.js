@@ -1,11 +1,13 @@
 //面向对象
 window.onload = function () {
     class Game{
-        constructor(screenClassName,btnClassName,jxClassName,keyClassName){
+        constructor(screenClassName,btnClassName,jxClassName,keyClassName,hpClassName,jfClassName){
             this.screen = document.querySelector(screenClassName)
             this.btn = document.querySelector(btnClassName)
             this.jx = document.querySelector(jxClassName)
             this.key = document.querySelector(keyClassName)
+            this.hp = document.querySelector(hpClassName)
+            this.jf = document.querySelector(jfClassName)
             this.letters = []
             // this.createLetter()
             this.runtz()
@@ -82,8 +84,17 @@ window.onload = function () {
                         // this.screen.removeChild(item.node)
                         // this.letters.splice(index,1)
                         // this.createLetter(1)
+                        this.hp.innerText -=1
+                        if (this.hp.innerText == 0) {
+                            clearInterval(this.t)
+                            alert("小爷也救不了你了🤷")
+                            this.hp.innerText = 10
+                            this.jx.style.zIndex = "4"
+                            this.btn.style.zIndex = "2"
+                        }
                     }
                 })
+
             },500)
             //暂停
             // let zt = document.querySelector(".zt")
@@ -153,7 +164,17 @@ window.onload = function () {
                         if (index != -1) {
                             this.removeChild(index)
                         }
-
+                    //积分
+                        let num = parseInt(this.jf.innerText)
+                        num +=1
+                        this.jf.innerText = num
+                        if (num == 50) {
+                            clearInterval(this.t)
+                            alert("大爷常来玩儿呐!🐱‍🏍")
+                            this.jf.innerText = 0
+                            this.jx.style.zIndex = "4"
+                            this.btn.style.zIndex = "2"
+                        }
                     }
                 }
 
@@ -163,16 +184,15 @@ window.onload = function () {
             this.screen.removeChild(this.letters[index].node)
             this.letters.splice(index,1)
             this.createLetter(1)
+
         }
-
-
 
 
 
     }
 
 
-    let game = new Game(".screen",".zt",".jx",".key")
+    let game = new Game(".screen",".zt",".jx",".key",".hp",".iq")
     game.createLetter()
     // console.log(Game.letters)
     // game.run()
