@@ -161,3 +161,55 @@ footer{
     line-height: 0.8rem;
 }
 /*下面开始*/
+/*弹出开始*/
+.tcbox{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99;
+    display: none;
+}
+.tc{
+    width: 6rem;
+    height: 6rem;
+    background: url("../img/gameover.png") no-repeat center center;
+    background-size: contain;
+    position: relative;
+    top: 1.6rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.tcz{
+    width: 0.4rem;
+    height: 0.4rem;
+    display: block;
+    /*background: red;*/
+    font-size: 0.52rem;
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 0.4rem;
+}
+.tccxks{
+    width: 4rem;
+    height: 0.8rem;
+    background: url("../img/btn.png") no-repeat center center;
+    margin: 0 auto;
+    top: 4.6rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    border-radius: 0.2rem;
+}
+/*弹出结束*/

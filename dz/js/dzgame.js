@@ -1,17 +1,21 @@
 //面向对象
 window.onload = function () {
     class Game{
-        constructor(screenClassName,btnClassName,jxClassName,keyClassName,hpClassName,jfClassName){
+        constructor(screenClassName,btnClassName,jxClassName,keyClassName,hpClassName,jfClassName,tcClassName,tczClassName,cxksClassName){
             this.screen = document.querySelector(screenClassName)
             this.btn = document.querySelector(btnClassName)
             this.jx = document.querySelector(jxClassName)
             this.key = document.querySelector(keyClassName)
             this.hp = document.querySelector(hpClassName)
             this.jf = document.querySelector(jfClassName)
+            this.tc = document.querySelector(tcClassName)
+            this.tcz = document.querySelector(tczClassName)
+            this.cxks = document.querySelector(cxksClassName)
             this.letters = []
             // this.createLetter()
             this.runtz()
             this.killLetter()
+            this.restart()
             this.isKill = false
         }
         //创建字母
@@ -87,11 +91,11 @@ window.onload = function () {
                         this.hp.innerText -=1
                         if (this.hp.innerText == 0) {
                             clearInterval(this.t)
-                            alert("小爷也救不了你了🤷")
                             this.hp.innerText = 10
                             this.jf.innerText = 0
                             this.jx.style.zIndex = "4"
                             this.btn.style.zIndex = "2"
+                            this.tc.style.display = "block"
                         }
                     }
                 })
@@ -169,13 +173,14 @@ window.onload = function () {
                         let num = parseInt(this.jf.innerText)
                         num +=1
                         this.jf.innerText = num
-                        if (num == 50) {
+                        this.tcz.innerText = num
+                        if (num == 10) {
                             clearInterval(this.t)
-                            alert("大爷常来玩儿呐!🐱‍🏍")
                             this.jf.innerText = 0
                             this.hp.innerText = 10
                             this.jx.style.zIndex = "4"
                             this.btn.style.zIndex = "2"
+                            this.tc.style.display = "block"
                         }
                     }
                 }
@@ -188,13 +193,19 @@ window.onload = function () {
             this.createLetter(1)
 
         }
-
+        //重新开始
+        restart(){
+            this.cxks.ontouchstart = ()=>{
+                this.tc.style.display = "none"
+                this.tcz.innerText = 0
+            }
+        }
 
 
     }
 
 
-    let game = new Game(".screen",".zt",".jx",".key",".hp",".iq")
+    let game = new Game(".screen",".zt",".jx",".key",".hp",".iq",".tcbox",".tcz",".tccxks")
     game.createLetter()
     // console.log(Game.letters)
     // game.run()
